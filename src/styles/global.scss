@@ -11,6 +11,18 @@ body {
     "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
 
+div,
+ul {
+  &::-webkit-scrollbar {
+    width: 3px;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: $bgDark800;
+  }
+}
+
 #root {
   width: 350px;
   height: 400px;
@@ -47,6 +59,11 @@ body {
     font: inherit;
     font-size: 14px;
     font-weight: 500;
+    line-height: 30px;
+
+    &::selection {
+      background-color: $bgDark800;
+    }
 
     &::placeholder {
       color: $textGray400;
@@ -70,11 +87,13 @@ body {
 
   background-color: $bgDark600;
 
+  overflow-y: auto;
+
   li {
     width: 100%;
 
     box-sizing: border-box;
-    padding: 15px 3px 10px 3px;
+    padding: 10px 3px 5px 3px;
     border-bottom: 1px solid $textGray500;
 
     color: $textGray300;
@@ -83,7 +102,7 @@ body {
 
     display: flex;
     justify-content: flex-start;
-    align-items: flex-end;
+    align-items: center;
     gap: 5px;
 
     p {
@@ -91,6 +110,11 @@ body {
       overflow: hidden;
       white-space: nowrap;
       text-overflow: ellipsis;
+      line-height: 25px;
+
+      &::selection {
+        background-color: $bgDark800;
+      }
     }
   }
 }
