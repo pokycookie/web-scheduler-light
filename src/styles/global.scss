@@ -1,5 +1,5 @@
-@import url("./reset.scss");
-@import url("./color.scss");
+@import "./reset.scss";
+@import "./color.scss";
 
 // Pretendard font
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css");
@@ -16,7 +16,7 @@ body {
   height: 400px;
   position: relative;
 
-  background-color: #d2b5ff;
+  background-color: $bgDark700;
   box-sizing: border-box;
   padding: 10px;
 
